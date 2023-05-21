@@ -19,8 +19,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": "/",
     "paths": {
-      "components/* utils/* hooks/* resources/*": ["./*"]
+      "components/*": ["./app/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
