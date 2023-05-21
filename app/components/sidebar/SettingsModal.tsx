@@ -111,19 +111,21 @@ const SettingsModal = (props: SettingsModalProps) => {
                   className="
                   mt-2
                   flex
+                  flex-shrink-0
                   items-center
                   gap-x-3
                 "
                 >
-                  <Image
-                    width="48"
-                    height="48"
-                    className="rounded-full"
-                    src={
-                      image ?? currentUser?.image ?? "/images/placeholder.jpg"
-                    }
-                    alt="Avatar"
-                  />
+                  <div className="relative w-[48px] h-[48px]">
+                    <Image
+                      className="rounded-full"
+                      src={
+                        image ?? currentUser?.image ?? "/images/placeholder.jpg"
+                      }
+                      fill
+                      alt="Avatar"
+                    />
+                  </div>
                   <CldUploadButton
                     options={{ maxFiles: 1 }}
                     onUpload={handleUpload}
